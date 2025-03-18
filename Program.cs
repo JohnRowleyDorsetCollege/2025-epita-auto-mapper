@@ -25,3 +25,18 @@ var user = new User
 UserDto userDto = mapper.Map<UserDto>(user);
 
 Console.WriteLine($"FullName: {userDto.FullName}, Email:  {userDto.Email}");
+
+List<User> users = new()
+{
+
+    new User{ Id = Faker.GlobalUniqueIndex, FullName = faker.Internet.UserName(), Email = faker.Internet.Email()    },
+    new User{ Id = Faker.GlobalUniqueIndex, FullName = faker.Internet.UserName(), Email = faker.Internet.Email()    }
+
+};
+
+List<UserDto> userDtos = mapper.Map<List<UserDto>>(users);
+
+foreach (var currentUserDto in userDtos)
+{
+    Console.WriteLine($"FullName: {currentUserDto.FullName}, Email:  {currentUserDto.Email}");
+}
