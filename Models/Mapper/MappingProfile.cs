@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace _2025_epita_auto_mapper.Models.Mapper
 {
-    public class UserProfile : Profile
+    public class MappingProfile : Profile
     {
-        public UserProfile()
+        public MappingProfile()
         {
             CreateMap<User, UserDto>();
         }

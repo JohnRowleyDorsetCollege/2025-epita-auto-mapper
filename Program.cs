@@ -9,7 +9,7 @@ Console.WriteLine("Hello, World!");
 
 var config = new MapperConfiguration(cfg =>
 {
-    cfg.AddProfile<UserProfile>();
+    cfg.AddProfile<MappingProfile>();
 });
 
 var mapper = new Mapper(config);
